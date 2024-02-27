@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -15,8 +18,4 @@ if ($conn->connect_error) {
 // Optionally set character set
 $conn->set_charset("utf8mb4");
 
-// Additional configuration if needed
-
-// Close the connection when done (this should be done at the end of your PHP scripts)
-// $conn->close();
 ?>

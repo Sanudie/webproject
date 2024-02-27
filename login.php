@@ -2,17 +2,24 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>streetpaws</title>
-	<link rel="stylesheet" href="login.css">
-	
+<title>Untitled Document</title>
+<link rel="stylesheet" href="login.css">
+
 </head>
 
 <body>
+    <?php 
+    session_start();
+    if(isset($_SESSION['logout_message'])) {
+        echo "<script>alert('" . $_SESSION['logout_message'] . "');</script>"; 
+        unset($_SESSION['logout_message']);
+    }
+    ?>
 	<header>
 	  <nav class ="navbar">
        
         <ul class="navlinks">
-            <li><a href ="#">HOME</a></li>
+            <li><a href ="homeafterlogin/home.php">HOME</a></li>
             <li ><a href ="#">ADOPT</a></li>
             <ul class ="dropdown">
             <li><a href ="#">Dogs</a></li>
@@ -41,10 +48,15 @@
 		<div style="color:#7E685A; font-family:'Copperplate', 'Copperplate Gothic Light'">Join the Family!&nbsp; &nbsp; &nbsp;<a href="signup.php" style="color: black; font-size:20px;">Sign Up</a></div><br>
 		<a href="defauly.html" style="color:brown; font-family:'Copperplate', 'Copperplate Gothic Light'">Continue without login</a>
 		</form>
-		
+		<?php	
+            if(isset($_SESSION['loginstatus'])) {
+			echo "<script>alert('" . $_SESSION['loginstatus'] . "');</script>";
+			unset($_SESSION['loginstatus']);
+		}
+		?>
 	</div>
 	
-	<img id="logo1" src="images\logo.png">
+	<img id="logo1" src="images\pawlogo.png">
 	<img id="dog" src="images\login.png">
 	
 	<script src="signIn.js"></script>

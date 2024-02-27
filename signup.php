@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>streetpaws</title>
 	<link rel="stylesheet" href="signup.css">
 </head>
 	

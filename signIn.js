@@ -1,4 +1,4 @@
 function goToLoginPage() {
-  window.location.href = "index.html";
+  window.location.href = "login.php";
 }
 

@@ -1,0 +1,327 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+body{
+	background-color: #FCD2B5;
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+:root{
+	--backdrop-filter-blur: blur(7px);
+	--box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+}
+.flex h2{
+	color: #dd881f;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.message{
+	text-align: center;
+	margin: 2rem auto;
+	font-size: 20px;
+	background: var(--pink);
+	color: #fff;
+	width: 50vw;
+	padding: 1rem;
+	border-radius: 5px;
+}
+.message i{
+	cursor: pointer;
+	float: right;
+}
+a{
+	text-decoration: none;
+}
+/*-----------form styles-----*/
+.form-container{
+	background-image: url('../images/bimage8.png');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form-container form{
+	width: 50vw;
+	height: auto;
+	margin: 0 auto;
+	padding: 2rem;
+	background: white;
+	border: 1px solid white;
+	backdrop-filter:  var(--backdrop-filter-blur);
+	box-shadow: var(--box-shadow);
+}
+form 
+textarea{
+	width: 100%;
+	background:white;
+	padding: .7rem 1.4rem;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	margin: .5rem 0;
+	padding-left: .5rem;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.40);
+	font-size: 14px;
+}
+
+
+form .btn{
+	cursor: pointer;
+	background: #FF811B;
+	color: #fff;
+	text-transform: uppercase;
+}
+form .btn:hover{
+	background: transparent;
+	border: 2px solid white;
+	color: black;
+}
+.form-container h3{
+	text-align: center;
+	text-transform: uppercase;
+	color: black;
+	margin: 1rem;}
+
+
+	/*--------------header of admin pannel---------*/
+	header{
+		background: #fff;
+		width: 100%;
+		padding: 1rem 0;
+		box-shadow: none;
+		position: sticky;
+		z-index: 1000;
+	}
+	.flex{
+		max-width: 1200px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		margin: 0 auto;
+	}
+	.logo{
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: black;
+	}
+
+	
+	.navbar a{
+		margin: 0 1rem;
+		font-size: 1.5rem;
+		color: black;
+		font-weight: bold;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+	}
+	.header{
+		background-color: #dcbb92;
+	}
+	.navbar a:hover,
+	.header .icons i:hover{
+		color: orange;
+	}
+	.header .icons{
+		display: flex;
+	}
+	.header .icons i{
+		margin-left: 1.2rem;
+		font-size: 1.5rem;
+		cursor: pointer;
+		color:black;
+	}
+	#menu-btn{
+		display: none;
+	}
+	.header .user-box{
+		position: absolute;
+		top: 150%;
+		right: -10%;
+		width: 18rem;
+		padding: .7rem 1rem;
+		background: #fff;
+		border-radius: 5px;
+		color: black;
+		font-size: 15px;
+		display: none;
+		transition: .5s;
+	}
+	.header .user-box.active{
+		display: block;
+	}
+	.header .user-box span{
+		
+		color: black;
+		font-size: 14px;
+	
+	}
+	
+	.logoutbutton{
+		background: #FF811B;
+		width: 14rem;
+		height: 40px;
+		padding: 0;
+		cursor: pointer;
+		color: black;
+		border-radius: 5px;
+		border:black;
+		outline: none;
+		margin: 0 auto;
+		margin-top: 1rem
+	}
+	.title{
+		text-align: center;
+		
+		margin: 2rem 0;
+		color: black;
+	}
+	.box-container{
+		padding: 2% 8%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit,minmax(18rem,1fr));
+		justify-content: center;
+		align-items: center;
+	}
+	.box-container .box{
+		box-shadow: var(--box-shadow);
+		padding: 1rem 0;
+		background: white;
+		border: 2px solid white;
+		margin: 1rem;
+		text-align: center;
+		border-radius: 5px;
+	}
+	.box-container .box h3{
+		font-size: 3rem;
+		color: black;
+	}
+	.box-container .box p{
+		font-size: 18px;
+		text-transform: capitalize;
+		margin: 1rem 0;
+	}
+
+
+
+/*--------add pets css----*/
+#pet_name ,#pet_age,#image{
+	width: 100%;
+	background:white;
+	padding: 1rem 1.4rem;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	margin: .5rem 0;
+	padding-left: .5rem;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.40);
+	font-size: 14px;
+}
+#submit{
+	background-color: #FFB145;
+	padding: 1rem 1.4rem;
+	border-radius: 5px;
+	font-size: 14px;
+}
+.AddPets .radio label {
+	display: inline-block;
+	margin-bottom: .5rem;
+  }
+  
+ .AddPets .radio input[type="radio"] {
+	display: inline-block;
+	margin-right: .5rem;
+  }
+  
+.AddPets form{
+	width: 50vw;
+	margin: 2rem auto;
+	background: #fff;
+	padding: 1rem 2rem;
+	border-radius: 5px;
+	border: 1px solid #fef0ea;
+}
+.AddPets form label{
+	text-transform: capitalize;
+	color: black;
+}
+.AddPets form textarea{
+	height: 200px;
+}
+/*---------------delete pets-----*/
+.show-pets{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	padding: 4%;
+}
+.show-pets .box-container{
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+.show-pets .box-container .box{
+	background: beige;
+	overflow: hidden;
+	text-align: center;
+	width: 500px;
+    height: 800px; 
+    margin: 4px;
+	margin-top: 2px;
+}
+.delete{
+	margin: .5rem;
+	text-transform: capitalize;
+	color: black;
+	font-weight: bolder;
+	background: #FF811B;
+	padding: .5rem 2rem;
+	border-radius: 5px;
+}
+.delete:hover{
+	color: black;
+	background: transparent;
+	border: 2px white;
+}
+.show-pets .box-container .box img {
+    max-width: 100%; 
+    height: auto;
+    display: block; 
+    margin: 0 auto; 
+}
+.show-pets .box img{
+	width: 80%;
+}
+.show-pets .box h3{
+	text-transform: capitalize;
+}
+
+
+
+
+	/*-------------media screen----------------------*/
+@media (max-width: 991px){
+	#menu-btn{
+		display: block;
+	}
+	.header .flex .navbar{
+		position: absolute;
+		top: 149%;
+		left: 0;
+		right: 0;
+		border-top: 1px solid orange;
+		background: #fff;
+		transition: .3s ease;
+		clip-path: polygon(0 0,100% 0,100% 0,0 0);
+	}
+	.header .flex .navbar.active{
+		clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+	}
+	.header .flex .navbar a{
+		display: block;
+		margin: 2rem;
+	}
+}
+

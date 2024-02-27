@@ -2,32 +2,91 @@
 <html lang ="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device width,initial scale =1.0">
+    <meta name="viewport" content="width=device-width,initial scale =1.0">
     <title> Street Paws</title>
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
+    <?php
+       session_start();     
+       if(isset($_SESSION['loginstatus']))
+        {        
+            echo "<script>alert('" . $_SESSION['loginstatus'] . "');</script>";
+            unset($_SESSION['loginstatus']);
+        }  
+    ?>
+
     <header>
-        <div class="headercontent"> 
+        <div class="headercontent"style="position: absolute;"> 
             <h2> WHERE EVERY PAW <br>FIND ITS WAY HOME</h2>
-        </div>    
+        </div>
+
+        <button onclick="prevSlide()"><</button>
+
+        <div id="slider-container">
+            <div id="slider">
+                <div class="slide"><img src="images/1.jpg" alt="Slide 1"></div>
+                <div class="slide"><img src="images/2.jpg" alt="Slide 2"></div>
+                <div class="slide"><img src="images/3.jpg" alt="Slide 3"></div>
+            </div>
+        </div>
+        
+        <button onclick="nextSlide()">></button>
    
         <nav class ="navbar">
-        <a href="" class="logo">
-            <img src="images/logo3.png" alt="logo">
+            <a href="" class="logo">
+                <img src="images/logo3.png" alt="logo">
 
-        </a>
-        <ul class="navlinks">
-            <li><a href ="#">HOME</a></li>
-            <li ><a href ="#">ADOPT</a></li>
-            <li><a href="#section1">ABOUT US</a></li>
-            <li><a href ="#">DONATE</a></li>
-            <li><a href ="#">ADD PETS</a></li>
-            <li><a href ="#">HELP</a></li>
-            <li><a href ="#">BLOG</a></li>
-            <li class="myaccount"><a href="myaccount.php">MY ACCOUNT</a></li>
-        </ul> 
-    </nav>
+            </a>
+            <ul class="navlinks">
+                <li><a href ="home.php">HOME</a></li>
+                <li ><a href ="#">ADOPT</a></li>
+                <li><a href="#section1">ABOUT US</a></li>
+                <li><a href ="#">DONATE</a></li>
+                <li><a href ="#">ADD PETS</a></li>
+                <li><a href ="#">HELP</a></li>
+                <li><a href ="#">BLOG</a></li>
+                <li>
+                    <a href="#" class="dropdown-trigger">
+                        <img class="userimage" src="../images/user.png" alt="My Account">
+                    </a>
+                    <ul class="dropdown">
+                        <li><a href='profile.php'  style="color: black;" onmouseover="this.style.color='#FF811B'" onmouseout="this.style.color='black'"> 
+                            <?php 
+                            if(isset($_SESSION['username'])) {
+                                echo "<span>" . $_SESSION['username'] . "</span>";
+                            }
+                            ?>
+                        </a></li>
+                        <li><a href='../logoutprocess.php'  style="color: black;" onmouseover="this.style.color='#FF811B'" onmouseout="this.style.color='black'">Logout</a></li>
+                    </ul>  
+                </li>
+            </ul> 
+        </nav>
+
+        
+
+<script>
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const slider = document.getElementById('slider');
+        currentSlide = index;
+        slider.style.transform = `translateX(${-currentSlide * 100}%)`;
+    }
+
+    function nextSlide() {
+        const totalSlides = document.querySelectorAll('.slide').length;
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        const totalSlides = document.querySelectorAll('.slide').length;
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    }
+</script>
     </header>
 
     <section id="section1">
@@ -36,7 +95,7 @@
         
         <p>High above the bustling streets of Horana, where the sounds of traffic fade into the background, lies a haven for the furry souls in need – Street Paws. Nestled amongst the serene landscapes of Sri Lanka, our pet rescue organization stands as a beacon of hope for the abandoned, the forgotten, and the unloved. Here, amidst the rustling leaves and gentle breezes, we dedicate ourselves to the noble cause of rescuing and rehabilitating stray animals, providing them with a second chance at a life filled with love and compassion. With every wag of a tail and every purr of contentment, we are reminded that the bond between human and animal transcends boundaries, and together, we create a brighter tomorrow for our four-legged friends."</p>
     </div>
-</section>
+    </section>
     <div class ="mainssBox">
         <h2>Success Stories</h2>
     <div class="Successstories">
@@ -66,7 +125,20 @@
 </div>
 <footer>
     @all rights reserved
-
 </footer>
     
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var dropdownTrigger = document.querySelector('.dropdown-trigger');
+        var dropdownMenu = document.querySelector('.dropdown');
+
+        dropdownTrigger.addEventListener('click', function() {
+            if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+                dropdownMenu.style.display = 'block';
+            } else {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+    });
+</script>
 </body>
