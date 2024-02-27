@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>streetpaws</title>
 	<link rel="stylesheet" href="login.css">
 	
 </head>
@@ -44,7 +44,7 @@
 		
 	</div>
 	
-	<img id="logo1" src="images\pawlogo.png">
+	<img id="logo1" src="images\logo.png">
 	<img id="dog" src="images\login.png">
 	
 	<script src="signIn.js"></script>
