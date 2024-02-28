@@ -7,6 +7,7 @@
 </head>
 	
 <body>	
+  <img id="logo1" src="images\logo.png">
   <div class="signInForm">
     <form action="signupprocess.php" method="POST">
       <span class="closeButton" onclick="goToLoginPage()">&times;</span>
@@ -22,7 +23,6 @@
   
     </form>
   </div> 
-	 <img id="logo1" src="images\pawlogo.png">
 	<script src="signIn.js"></script>
 </body>
 

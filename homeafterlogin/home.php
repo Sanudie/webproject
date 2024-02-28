@@ -21,17 +21,7 @@
             <h2> WHERE EVERY PAW <br>FIND ITS WAY HOME</h2>
         </div>
 
-        <button onclick="prevSlide()"><</button>
-
-        <div id="slider-container">
-            <div id="slider">
-                <div class="slide"><img src="images/1.jpg" alt="Slide 1"></div>
-                <div class="slide"><img src="images/2.jpg" alt="Slide 2"></div>
-                <div class="slide"><img src="images/3.jpg" alt="Slide 3"></div>
-            </div>
-        </div>
         
-        <button onclick="nextSlide()">></button>
    
         <nav class ="navbar">
             <a href="" class="logo">
@@ -39,13 +29,12 @@
 
             </a>
             <ul class="navlinks">
-                <li><a href ="home.php">HOME</a></li>
-                <li ><a href ="#">ADOPT</a></li>
+                <li><a href ="../homeafterlogin/home.php">HOME</a></li>
+                <li ><a href ="../adopt/adopt.php">ADOPT</a></li>
                 <li><a href="#section1">ABOUT US</a></li>
-                <li><a href ="#">DONATE</a></li>
-                <li><a href ="#">ADD PETS</a></li>
-                <li><a href ="#">HELP</a></li>
-                <li><a href ="#">BLOG</a></li>
+                <li><a href ="../donate/donatepage.php">DONATE</a></li>
+                <li><a href ="../help page/help.php">HELP</a></li>
+                <li><a href ="../Blog/index.php">BLOG</a></li>
                 <li>
                     <a href="#" class="dropdown-trigger">
                         <img class="userimage" src="../images/user.png" alt="My Account">
@@ -66,27 +55,7 @@
 
         
 
-<script>
-    let currentSlide = 0;
 
-    function showSlide(index) {
-        const slider = document.getElementById('slider');
-        currentSlide = index;
-        slider.style.transform = `translateX(${-currentSlide * 100}%)`;
-    }
-
-    function nextSlide() {
-        const totalSlides = document.querySelectorAll('.slide').length;
-        currentSlide = (currentSlide + 1) % totalSlides;
-        showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-        const totalSlides = document.querySelectorAll('.slide').length;
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        showSlide(currentSlide);
-    }
-</script>
     </header>
 
     <section id="section1">
@@ -117,16 +86,41 @@
                 </p>
         </div>
         <div class="ssbox">
-            <img src="images/ss3.jpg" alt="Success Story 3">
+            <img src="images/12.png" alt="Success Story 3">
             <p>Sudu's Story:<br>
                 Sudu, with her soulful eyes and wagging tail, had been waiting patiently for a forever home at the shelter when we stumbled upon her picture online. There was an instant connection between us, as if Sudu knew she had finally found her people. From the moment we brought her home, Sudu has been a source of endless laughter and unconditional love. Whether she's accompanying us on long hikes through the woods or simply snuggling up with us on lazy Sunday afternoons, Sudu's presence fills our home with warmth and happiness. Her journey from a lonely shelter dog to a cherished member of our family is a reminder that sometimes, the most precious things in life come from unexpected places</p>
         </div>
     </div>
 </div>
-<footer>
-    @all rights reserved
+     
+<footer class="blogf">
+    <div class="ftr">
+        <div class="ftr-card">
+            <a href="#"><img src="source/logo.png" alt="" srcset=""></a>
+            <p>© 2024 Pets Foundation. <br>
+                All rights reserved.<br> 
+                Together,we're making tails wag <br> and hearts purr
+            </p>
+        </div>
+        <div class="ftr-card">
+            <h5>Contact Us</h5>
+            <p>No.100 Colombo,Sri Lanka.</p>
+            <p>+94-115904528</p>
+            <p>+94-705674528</p>
+            <p>streetpaws@gmail.com</p>
+        </div>
+        <div class="ftr-card">
+            <h5>Follow Us</h5>
+            <a href="https://facebook.com"><img src="source/FACE.png" alt="" srcset=""></a>
+            <a href="https://twitter.com"><img src="source/Vector (1).png" alt="" srcset=""></a>
+            <a href="https://pinterest.com"><img src="source/Vector (2).png" alt="" srcset=""></a>
+            <a href="https://instagram.com"><img src="source/Vector.png" alt="" srcset=""></a>
+        </div>
+    
+    </div>
 </footer>
     
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var dropdownTrigger = document.querySelector('.dropdown-trigger');

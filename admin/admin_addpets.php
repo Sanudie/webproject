@@ -33,10 +33,6 @@ if (isset($_POST['AddPets'])) {
     }
 }
 
-
-
-
-
 /*-----------deleting pets--------------------*/
 if (isset($_GET['delete'])) {
 	$delete_id = $_GET['delete'];
@@ -54,9 +50,31 @@ if (isset($_GET['delete'])) {
 }
 
 
+if (isset($_GET['pet_id'])) {
+    $pet_id = $_GET['pet_id'];
+    $select_pet = mysqli_query($conn, "SELECT * FROM `pets` WHERE pet_id = '$pet_id'") or die('query failed');
+    $fetch_pet = mysqli_fetch_assoc($select_pet);
+}
 
+if (isset($_POST['UpdatePet'])) {
 
+    $pet_name = mysqli_real_escape_string($conn, $_POST['pet_name']);
+    $pet_age = mysqli_real_escape_string($conn, $_POST['pet_age']);
+    $pet_details = mysqli_real_escape_string($conn, $_POST['pet_details']);
+    
+  
+
+    $update_pet = mysqli_query($conn, "UPDATE `pets` SET `pet_name`='$pet_name', `pet_age`='$pet_age', `pet_details`='$pet_details',  WHERE `pet_id`='$pet_id'") or die('update query failed');
+
+    if ($update_pet) {
+        $message[] = 'Pet updated successfully';
+    }
+}
 ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,8 +117,7 @@ if (isset($_GET['delete'])) {
 		</form>
 	</section>
     <script type="text/javascript" src="script.js"></script>
-</body>
-</html>
+
 
 
 
@@ -120,7 +137,7 @@ if (isset($_GET['delete'])) {
 				<p>Gender: <?php echo $fetch_pets['pet_gender']; ?> </p>
 				<h4><?php echo $fetch_pets['pet_name']; ?></h4>
 				<p class="detail"><?php echo $fetch_pets['pet_details']; ?></p>
-
+				<a href="admin_addpets.php?edit=<?php echo $fetch_pets['id'] ?>" class="edit">edit</a>
 				<a href="admin_addpets.php?delete=<?php echo $fetch_pets['pet_id'] ?>" class="delete" onclick = "return conform('delete this pet');">delete</a>
 			</div>
 			<?php 
@@ -129,4 +146,33 @@ if (isset($_GET['delete'])) {
 			?>
 		</div>
 	</section>
-	
+<section class="Update-pet">
+<form method="post" action="" enctype="multipart/form-data">
+            <h1 class="title">Update Pet</h1>
+
+           >
+            <div class="input-field">
+                <label for="pet_name">Name</label><br><br>
+                <input type="text" name="pet_name" id="pet_name" value="<?php echo $fetch_pet['pet_name']; ?>" required><br><br>
+            </div>
+
+            <div class="input-field">
+                <label for="pet_age">Age (in months)</label><br><br>
+                <input type="text" name="pet_age" id="pet_age" value="<?php echo $fetch_pet['pet_age']; ?>" required><br><br>
+            </div>
+
+           
+
+            <div class="input-field">
+                <label for="pet_details">Pet Details</label>
+                <textarea name="pet_details" id="pet_details" required><?php echo $fetch_pet['pet_details']; ?></textarea>
+            </div>
+
+            <input type="submit" name="UpdatePet" value="Update Pet" class="btn">
+        </form>
+    </section>
+</body>
+
+
+
+</html>

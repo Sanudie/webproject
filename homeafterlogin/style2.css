@@ -71,7 +71,7 @@ header{
 }
 
 .headercontent{
-    align-self: flex-start;
+    
     color:black;
     text-align:center;
     padding: 90px;
@@ -143,22 +143,50 @@ footer{
     background-color: #FF811B;
 }
 
-#slider-container {
-    padding-top: 80px;
+
+.ftr{
+    background-color: #fff;
     width: 100%;
-    height: 60%;
-    overflow: hidden;
-}
-
-#slider {
+    height: 300px;
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    justify-content: space-around;
+    padding-left: 40px;
+      box-sizing: border-box;
+} 
+
+.ftr-card{
+    flex-direction: column;
+    width: 30%;
+    padding: 70px;
+
 }
 
-.slide {
-    min-width: 100%;
+.ftr-card:first-child{
+    padding-top: 80px;
 }
 
-button {
-    cursor: pointer;
+.ftr-card img{
+    margin-bottom: 20px;
+    
+}
+
+.ftr-card img:hover {
+    transform: scale(1.1); 
+}
+
+.ftr-card h5{
+    font-size: 24px;
+    margin-bottom: 20px;
+ 
+}
+.ftr-card p{
+    margin: 10px;
+}
+.ftr-card:last-child img{
+    width: 40px;
+    padding: 10px;
+    height: 40px;
+}
+.blogf .ftr{
+    background-color:#fcd2b5;
 }

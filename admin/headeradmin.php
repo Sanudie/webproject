@@ -9,16 +9,18 @@
 <body>
 	<header class="header">
 		<div class="flex">
-			<a href="admin.php" class="logo"><h2>Admin Panel</h2></a>
+			<a href="admin.php" class="logo"><h2>Admin Pannel</h2></a>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
             <link rel="stylesheet" type="text/css" href="styles1.css">
 
             <nav class="navbar">
-				<a href="admin.php">Home</a>
+				
 				<a href="admin_addpets.php">Add pets</a>
-				<a href="admin_requests.php">Requests</a>
+				<a href="requestforms.php">Requests</a>
 				<a href="admin_user.php">Users</a>
-				<a href="admin_message.php">message</a>
+				<a href="admin_message.php">Donations</a>
+				
+				
 			</nav>
 			<div class="icons">
 				<i class="bi bi-list" id="menu-btn"></i>

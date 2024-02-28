@@ -286,8 +286,8 @@ form .btn:hover{
 	border: 2px white;
 }
 .show-pets .box-container .box img {
-    max-width: 100%; 
-    height: auto;
+    max-width: 90%; 
+    height: 60%S;
     display: block; 
     margin: 0 auto; 
 }
@@ -299,6 +299,15 @@ form .btn:hover{
 }
 
 
+
+
+.show-requests {
+		border: 2px solid black;
+		padding: 20px;
+		border-radius: 10px;
+		width: 300px;
+		margin: 100px; 
+	}
 
 
 	/*-------------media screen----------------------*/

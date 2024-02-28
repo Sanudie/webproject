@@ -1,0 +1,40 @@
+.ftr{
+    background-color: #fff;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 40px;
+      box-sizing: border-box;
+} 
+
+.ftr-card{
+    flex-direction: column;
+    width: 30%;
+    padding: 70px;
+
+}
+
+.ftr-card:first-child{
+    padding-top: 80px;
+}
+
+.ftr-card img{
+    margin-bottom: 20px;
+}
+.ftr-card h5{
+    font-size: 24px;
+    margin-bottom: 20px;
+ 
+}
+.ftr-card p{
+    margin: 10px;
+}
+.ftr-card:last-child img{
+    width: 40px;
+    padding: 10px;
+    height: 40px;
+}
+.blogf .ftr{
+    background-color:#fcd2b5;
+}

@@ -42,9 +42,10 @@ form{
 }
 
 #logo1{
-        position: absolute;
-        top: 0;
-        left: 0;
+	position: fixed;
+	display: flex;
+	padding: 40px 40px;
+	box-sizing: content-box;
        }
 .signIn{
 	background-color:#FF811B;

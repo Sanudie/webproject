@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;800&family=Mirza:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@200;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;800&family=Mirza:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@200;400;500;600&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;800&family=Mea+Culpa&family=Mirza:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@200;400;500;600&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;800&family=Mate+SC&family=Mea+Culpa&family=Mirza:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@200;400;500;600&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;800&family=Mate+SC&family=McLaren&family=Mea+Culpa&family=Mirza:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@200;400;500;600&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;800&family=Italiana&family=Mate+SC&family=McLaren&family=Mea+Culpa&family=Mirza:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@200;400;500;600&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;800&family=Italiana&family=Mate+SC&family=McLaren&family=Mea+Culpa&family=Mirza:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@200;400;500;600&family=Saira+Semi+Condensed:wght@100;200;300;400&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;800&family=Poppins:wght@200;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+a:hover{
+    color: #FF811B;
+}
+
+.userimage {
+    width: 40px;
+    height: auto;
+}
+
+.navbar{
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    color:black;
+    
+}
+
+ul{
+    list-style: none;
+   
+}
+.navlinks{
+    display: flex;
+    align-items: center;
+
+}
+.navlinks li{
+    margin: 0 10px;
+    position: relative;
+}
+
+header{
+    width: 98.8vw;
+    height: 100vh;
+    background-image: url(portrait-five-adorable-golden-retriever-puppies.jpg)  ;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: bottom ;
+}
+
+ul li ul.dropdown {
+    background: white;
+    position: absolute;
+    z-index: 999;
+    margin-top: 5px;
+    padding: 5px;
+    right: 0;
+    min-width: 100%;
+    display: none;
+    border-radius: 8px;
+}
+
+.wrapper {
+    max-width: 75%;
+    margin: auto;
+    margin-top: -560px;
+    margin-bottom: 113px;
+    border: none;
+   
+  }
+  
+  .wrapper > p{
+    margin: 1.5rem 0;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-top: 50px;
+  }
+
+  .wrapper > h1 {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  
+  .wrapper > h1 {
+    letter-spacing: 3px;
+    margin-bottom: 1.5cm;
+  }
+  
+  .accordion {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 0.5rem 0.05rem;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  /*.accordion i {
+    font-size: 1rem;
+    margin-left: 2cm;
+  }*/
+  
+  .active,
+  .accordion:hover {
+    background-color: #f1f7f5;
+  }
+  .pannel {
+    padding: 0 2rem 2.5rem 2rem;
+    background-color: white;
+    overflow: hidden;
+    background-color: #f1f7f5;
+    display: none;
+    border: none;
+    
+  }
+  .pannel p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+    line-height: 1.4;
+   
+  }
+  
+  .faq {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    border: none;
+  }
+  .faq.active {
+    border: none;
+
+  }
+  
+
+.Under{
+    display: flex;
+}
+.Get{
+    border: 1px solid rgb(255, 255, 255);
+    padding:25px;
+    border-radius: 17px;
+    width: 680px;
+    background-color: #ecebeb;
+    backdrop-filter: blur(13px);
+    margin-left: 20px;
+}
+.Get h1{
+    text-align: center;
+    font-family: "EB Garamond";
+}
+.Get h2{
+    font-size: 15px;
+    padding-top: 0.5cm;
+    font-family: "EB Garamond";
+    padding-bottom: 0.2cm;
+}
+.Get .text-box1{
+    font-family: 'Courier New', Courier, monospace;
+}
+.text-box1 input{
+    width: 49%;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    border: none;
+    color: #868686;
+}
+.Get h3{
+    font-size: 15px;
+    padding-top: 0.5cm;
+    font-family: "EB Garamond";
+    padding-bottom: 0.2cm;
+}
+.Get .text-box2{
+    font-family: 'Courier New', Courier, monospace;
+}
+.text-box2 input{
+    width: 49%;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    border: none;
+}
+.Get h4{
+    font-size: 15px;
+    padding-top: 0.5cm;
+    font-family: "EB Garamond";
+    padding-bottom: 0.2cm;
+}
+.Get .text-box3{
+    font-family: 'Courier New', Courier, monospace;
+}
+.text-box3 input{
+    width: 49%;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    border: none;
+}
+.Get h5{
+    font-size: 15px;
+    padding-top: 0.5cm;
+    font-family: "EB Garamond";
+    padding-bottom: 0.2cm;
+}
+.Get .text-box4{
+    font-family: 'Courier New', Courier, monospace;
+}
+.text-box4 input{
+    width: 49%;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    border: none;
+}
+.Get h6{
+    font-size: 15px;
+    padding-top: 0.5cm;
+    font-family: "EB Garamond";
+    padding-bottom: 0.2cm;
+}
+input, textarea{
+    width: 628px;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    border: none;
+}
+button{
+    border-radius: 15px;
+    width: 80px;
+    height: 34px;
+    background-color: #111111;
+    border: none;
+    color: #ffffff;
+    margin-left: 540px;
+    margin-top: 0.6cm;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #adadad;
+    color: #050505;
+}
+.Contact{
+    margin-left: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 25px;
+    border-radius: 17px;
+    width: 680px;
+    background-color: #ecebeb;
+    backdrop-filter: blur(13px);
+    margin-right: 20px;
+}
+.logo1{
+    margin-left: 70px;
+}
+.icon{
+    font-size: 40px;
+    margin-left: 180px;
+    margin-top: 40px;
+}
+.icon .whatsapp .wh1{
+    color: #8add64;
+    display: flex;
+    padding-bottom: 10px;
+}
+.wh{
+    font-size:20px;
+    color: #111111;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+.icon .youtube .yo1{
+    color: #da2a2a;
+    display: flex;
+    padding-bottom: 10px;
+}
+.you{
+    font-size:20px;
+    color: #111111;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+.icon .facebook .wh1{
+    color: #4d77eb;
+    display: flex;
+    padding-bottom: 10px;
+}
+.face{
+    font-size:20px;
+    color: #111111;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+.icon .instagram .wh1{
+    color: #e43ddb;
+    display: flex;
+    padding-bottom: 10px;
+}
+.ins{
+    font-size:20px;
+    color: #111111;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+.Link{
+    margin-left: 180px;
+    color: #000000;
+    margin-top: 40px;
+}
+.icn{
+    display: flex;
+}
+.Loc{
+    margin-top: 13px;
+}
+.add h1{
+    font-size: 20px;
+    padding: 10px;
+}
+.add h2{
+    font-size: 15px;
+    padding: 2px;
+    margin-bottom: 20px;
+    margin-left: 8px;
+}
+.add1{
+    color: #050505;
+    background-color: #000000;
+}
+.add1 :hover{
+    color: blue;
+}
+.icn1{
+    display: flex;
+}
+.pho{
+    margin-top: 13px;
+}
+.num h1{
+    font-size: 20px;
+    padding: 10px;
+}
+.num h2{
+    font-size: 15px;
+    padding: 2px;
+    margin-bottom: 20px;
+    margin-left: 8px;
+}
+.num1{
+    color: #050505;
+    background-color: #000000;
+}
+.num1 :hover{
+    color: blue;
+}
+.icn2{
+    display: flex;
+}
+.mail{
+    margin-top: 13px;
+}
+.email h1{
+    font-size: 20px;
+    padding: 10px;
+}
+.email h2{
+    font-size: 15px;
+    padding: 2px;
+    margin-bottom: 20px;
+    margin-left: 8px;
+}
+.email1{
+    color: #050505;
+    background-color: #000000;
+}
+.email1 :hover{
+    color: blue;
+}
+
+footer{
+    background-color: #fcd2b5;
+}
+
+
+.ftr{
+    background-color: #fff;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 40px;
+      box-sizing: border-box;
+} 
+
+.ftr-card{
+    flex-direction: column;
+    width: 30%;
+    padding: 70px;
+
+}
+
+.ftr-card:first-child{
+    padding-top: 80px;
+}
+
+.ftr-card img{
+    margin-bottom: 20px;
+    
+}
+
+.ftr-card img:hover {
+    transform: scale(1.1); 
+}
+
+.ftr-card h5{
+    font-size: 24px;
+    margin-bottom: 20px;
+ 
+}
+.ftr-card p{
+    margin: 10px;
+}
+.ftr-card:last-child img{
+    width: 40px;
+    padding: 10px;
+    height: 40px;
+}
+.blogf .ftr{
+    background-color:#fcd2b5;
+}

@@ -1,0 +1,60 @@
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 50px;
+    background-color: #FCD2B5;
+}
+
+.show-requests {
+    border: 2px solid #ebeff3;
+    padding: 40px;
+    border-radius: 10px;
+    width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    margin-bottom: 15px;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-field input,
+.input-field textarea,
+.input-field select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.radio {
+    margin-bottom: 15px;
+}
+
+.btn {
+    width: 100%;
+    background-color: #CFB7A2;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #FFB145;
+}
